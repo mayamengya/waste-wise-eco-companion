@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="App.css" />
+    <title>Waste Wise</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="half">
+        <form id="fileForm" enctype="multipart/form-data">
+          <input type="file" id="fileInput" name="file" />
+          <button type="button" onclick="uploadFile()">Upload</button>
+        </form>
+
+          {% if processed_image %}
+        <h2>Processed Image Preview</h2>
+        <img src="{{ processed_image }}" alt="Processed Image" width="400">
+        <br>
+        <a href="/download_processed_image">Download Processed Image</a>
+         {% endif %}
+        <div id="map" style="height: 600px; width: 100%"></div>
+        <script src="App.js"></script>
+      </div>
+    </div>
+  </body>
+</html>

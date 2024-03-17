@@ -8,10 +8,6 @@ import supervision as sv
 # import OpenCV
 import cv2
 
-CLIENT = InferenceHTTPClient(
-    api_url="https://detect.roboflow.com",
-    api_key="UlcWc2CYeXZpIp0u5mzX"
-)
 
 def image_detection(file_name):
     """
@@ -25,7 +21,6 @@ def image_detection(file_name):
     'image_path': 'trash_image_7.jpg', 'prediction_type': 'ObjectDetectionModel'}],
     'image': {'width': '800', 'height': '500'}}
     """
-    image = cv2.imread(file_name)
 
     rf = Roboflow(api_key="UlcWc2CYeXZpIp0u5mzX")
     project = rf.workspace().project("garbage_detection-wvzwv")

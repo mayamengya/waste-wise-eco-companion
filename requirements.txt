@@ -7,3 +7,6 @@ opencv-python~=4.8.0.76
 supervision~=0.19.0rc5
 inference~=0.9.16
 roboflow~=1.1.23
+torch~=2.2.1
+numpy~=1.25.2
+ultralytics~=8.1.27
